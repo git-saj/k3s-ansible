@@ -66,7 +66,7 @@
     daemon_reload: yes
     state: restarted
     enabled: yes
-  ignore_errors: "{{ ansible_check_mode }}"
+  when: not ansible_check_mode
 
 - name: Wait for node-token
   wait_for:
