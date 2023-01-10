@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   connection: local
+  become: no
   gather_facts: yes
   tasks:
     - name: Install netaddr
